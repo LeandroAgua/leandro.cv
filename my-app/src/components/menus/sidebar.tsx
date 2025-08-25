@@ -1,7 +1,7 @@
 import {Sidebar, Menu, MenuItem, SubMenu} from 'react-pro-sidebar';
 import { useNavigate } from 'react-router-dom';
 
-function MenuMain(){
+function SidebarMenu() {
     const navigate = useNavigate();
 
     const handleMenuClick = (path) => {
@@ -9,7 +9,7 @@ function MenuMain(){
     };
 
     return (
-        <Sidebar style={{ height: '100vh' }}>
+        <Sidebar style={{ height: '100vh', width: '50vh' }}>
             <Menu>
                 <SubMenu label="Projects">
                     <MenuItem onClick={() => handleMenuClick('/')}>
@@ -38,4 +38,4 @@ function MenuMain(){
     )
 }
 
-export default MenuMain;
+export default SidebarMenu;
